@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /Users/mac/AndroidStudioProjects/CICDIntegrationExample/app/build/reports/lint-results-debug.html
+        working-directory: /Users/mac/AndroidStudioProjects/CICDIntegrationExample/
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
