@@ -29,5 +29,5 @@ jobs:
 #        working-directory: /Users/mac/AndroidStudioProjects/CICDIntegrationExample/
         with:
           name: lint.html
-          path: /app/build/reports/lint-results-debug.html
+          path: ${{ github.workspace }}/app/build/reports/lint-results-debug.html
 
