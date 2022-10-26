@@ -1,28 +1,4 @@
-#name: CI
-#on:
-#  push:
-#    branches: [ master ]
-#  pull_request:
-#    branches: [ master ]
-#  workflow_dispatch:
-#
-#jobs:
-#  lint:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout the code
-#        uses: actions/checkout@v3
-#
-#      - name: Run Lint
-#        uses: ./gradlew lintDebug
-#
-#      - name: Upload html test report
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: lint.html
-#          path: app/build/reports/lint-results-debug.html
-#          name: CI
-
+name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the $default-branch branch
@@ -46,11 +22,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Repository
         uses: actions/checkout@v3
-
-        -uses: actions/setup-java@v3
-         with:
-          distribution: temurin
-          java-version: 11
 
       # Running lint check command
       - name: Run Lint
